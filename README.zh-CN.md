@@ -1,47 +1,62 @@
 ---
-title: 介绍
-nav:
-  title: 文档
-  order: 1
+title: UmiJS - 插件化的企业级前端应用框架
+hero:
+  title: UmiJS
+  desc: 🍙 插件化的企业级前端应用框架。
+  actions:
+    - text: 快速上手 →
+      link: /zh-CN/docs/getting-started
+features:
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/a1c647aa-a410-4024-8414-c9837709cb43/k7787itw_w126_h114.png
+    title: 可扩展
+    desc: Umi 实现了完整的生命周期，并使其插件化，Umi 内部功能也全由插件完成。此外还支持插件和插件集，以满足功能和垂直域的分层需求。
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/b54b48c7-087a-4984-b150-bcecb40920de/k7787z07_w114_h120.png
+    title: 开箱即用
+    desc: Umi 内置了路由、构建、部署、测试等，仅需一个依赖即可上手开发。并且还提供针对 React 的集成插件集，内涵丰富的功能，可满足日常 80% 的开发需求。
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/464cb990-6db8-4611-89af-7766e208b365/k77899wk_w108_h132.png
+    title: 企业级
+    desc: 经蚂蚁内部 3000+ 项目以及阿里、优酷、网易、飞猪、口碑等公司项目的验证，值得信赖。
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/201bea40-cf9d-4be2-a1d8-55bec136faf2/k7788a8s_w102_h120.png
+    title: 大量自研
+    desc: 包含微前端、组件打包、文档工具、请求库、hooks 库、数据流等，满足日常项目的周边需求。
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/67b771c5-4bdd-4384-80a4-978b85f91282/k7788ov2_w126_h126.png
+    title: 完备路由
+    desc: 同时支持配置式路由和约定式路由，同时保持功能的完备性，比如动态路由、嵌套路由、权限路由等等。
+  - icon: https://gw.alipayobjects.com/zos/basement_prod/d078a5a9-1cb3-4352-9f05-505c2e98bc95/k7788v4b_w102_h126.png
+    title: 面向未来
+    desc: 在满足需求的同时，我们也不会停止对新技术的探索。比如 modern mode、webpack@5、自动化 external、bundler less 等等。
+footer: Open-source MIT Licensed | Copyright © 2017-present<br />Powered by [dumi](https://d.umijs.org/).
+
 ---
 
-<img src="https://img.alicdn.com/tfs/TB1zomHwxv1gK0jSZFFXXb0sXXa-200-200.png" width="120" />
+## 三分钟上手 Umi
 
-## Umi 是什么？
+手动创建文件，
 
-Umi，中文可发音为**乌米**，是可扩展的企业级前端应用框架。Umi 以路由为基础的，同时支持配置式路由和约定式路由，保证路由的功能完备，并以此进行功能扩展。然后配以生命周期完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。
+```bash
+# 创建目录
+$ mkdir myapp && cd myapp
 
-Umi 是蚂蚁金服的底层前端框架，已直接或间接地服务了 3000+ 应用，包括 java、node、H5 无线、离线（Hybrid）应用、纯前端 assets 应用、CMS 应用等。他已经很好地服务了我们的内部用户，同时希望他也能服务好外部用户。
+# 安装依赖
+$ yarn add umi
 
-它主要具备以下功能：
+# 创建页面
+$ npx umi g page index --typescript --less
 
-* 🎉 **可扩展**，Umi 实现了完整的生命周期，并使其插件化，Umi 内部功能也全由插件完成。此外还支持插件和插件集，以满足功能和垂直域的分层需求。
-* 📦 **开箱即用**，Umi 内置了路由、构建、部署、测试等，仅需一个依赖即可上手开发。并且还提供针对 React 的集成插件集，内涵丰富的功能，可满足日常 80% 的开发需求。
-* 🐠 **企业级**，经蚂蚁内部 3000+ 项目以及阿里、优酷、网易、飞猪、口碑等公司项目的验证，值得信赖。
-* 🚀 **大量自研**，包含微前端、组件打包、文档工具、请求库、hooks 库、数据流等，满足日常项目的周边需求。
-* 🌴 **完备路由**，同时支持配置式路由和约定式路由，同时保持功能的完备性，比如动态路由、嵌套路由、权限路由等等。
-* 🚄 **面向未来**，在满足需求的同时，我们也不会停止对新技术的探索。比如 dll 提速、modern mode、webpack@5、自动化 external、bundler less 等等。
+# 启动开发
+$ npx umi dev
+```
 
-## 什么时候不用 umi？
+或者[通过脚手架快速上手](/zh-CN/docs/getting-started)。
 
-如果你，
+## Contributors
 
-* 需要支持 IE 8 或更低版本的浏览器
-* 需要支持 React 16.8.0 以下的 React
-* 需要跑在 Node 10 以下的环境中
-* 有很强的 webpack 自定义需求和主观意愿
-* 需要选择不同的路由方案
+This project exists thanks to all the people who contribute. [Join us!](/zh-CN/docs/contributing)
 
-Umi 可能不适合你。
+<a href="https://github.com/umijs/umi/graphs/contributors"><img src="https://opencollective.com/umi/contributors.svg?width=960&button=false" /></a>
 
-## 为什么不是？
+## 反馈
 
-### [create-react-app](https://github.com/facebook/create-react-app)
-
-create-react-app 是基于 webpack 的打包层方案，包含 build、dev、lint 等，他在打包层把体验做到了极致，但是不包含路由，不是框架，也不支持配置。所以，如果大家想基于他修改部分配置，或者希望在打包层之外也做技术收敛时，就会遇到困难。
-
-### [next.js](https://github.com/zeit/next.js)
-
-next.js 是个很好的选择，Umi 很多功能是参考 next.js 做的。要说有哪些地方不如 Umi，我觉得可能是不够贴近业务，不够接地气。比如 antd、dva 的深度整合，比如国际化、权限、数据流、配置式路由、补丁方案、自动化 external 方面等等一线开发者才会遇到的问题。
-
-
+| Github Issue | 钉钉群 | 微信群 |
+| --- | --- | --- |
+| [umijs/umi/issues](https://github.com/umijs/umi/issues) | <img src="https://img.alicdn.com/tfs/TB1WPiWNUY1gK0jSZFCXXcwqXXa-1125-1485.jpg" width="60" /> | <img src="https://img.alicdn.com/tfs/TB1KOhYk8FR4u4jSZFPXXanzFXa-547-550.png" width="60" /> |
